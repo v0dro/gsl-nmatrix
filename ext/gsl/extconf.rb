@@ -110,10 +110,27 @@ gsl_have_library('gsl_poly_solve_quartic')
 
 gsl_def(:HAVE_GNU_GRAPH) if find_executable('graph')
 
-gsl_gem_config('narray', 'src')
+begin
+  require 'rubygems'
+  nm_gemspec=Gem::Specification.find_by_path('nmatrix.h')
+  if nm_gemspec
+    $CPPFLAGS = " -I#{nm_gemspec.require_path} "+$CPPFLAGS
+  end
+rescue LoadError
+end
 
-have_header('narray.h')
-have_library('narray') if RUBY_PLATFORM =~ /cygwin|mingw/
+nmatrix_config = dir_config('nmatrix',nm_gemspec.full_gem_path, nm_gemspec.require_path)
+have_nmatrix_h = have_header("nmatrix.h")
+
+if nmatrix_config
+  if RUBY_PLATFORM =~ /cygwin|mingw/
+    have_library("nmatrix")
+  end
+end
+# gsl_gem_config('nmatrix')
+
+# have_header('nmatrix.h')
+# have_library('nmatrix') if RUBY_PLATFORM =~ /cygwin|mingw/
 
 unless arg_config('--disable-tamu-anova')
   gsl_dir_config('tamu_anova')

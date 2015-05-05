@@ -15,6 +15,10 @@
 #include "include/rb_gsl_with_narray.h"
 #endif
 
+#ifdef HAVE_NMATRIX_H
+#include "include/rb_gsl_with_nmatrix.h"
+#endif
+
 int gsl_linalg_matmult_int(const gsl_matrix_int *A,
          const gsl_matrix_int *B, gsl_matrix_int *C);
 

@@ -28,8 +28,8 @@
 
 typedef gsl_permutation gsl_index;
 
-#ifdef HAVE_NARRAY_H
-EXTERN VALUE cNArray;
+#ifdef HAVE_NMATRIX_H
+EXTERN VALUE cNMatrix;
 #endif
 
 EXTERN VALUE cgsl_block, cgsl_block_int;
@@ -57,7 +57,6 @@ EXTERN VALUE cgsl_matrix_int_view_ro;
 EXTERN VALUE cgsl_permutation;
 EXTERN VALUE cgsl_index;
 EXTERN VALUE cgsl_function;
-EXTERN VALUE mgsl_narray;
 
 EXTERN VALUE mDirac;
 

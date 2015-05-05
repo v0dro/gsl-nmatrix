@@ -16,6 +16,10 @@
 #include "include/rb_gsl_with_narray.h"
 #endif
 
+#ifdef HAVE_NMATRIX_H
+#include "include/rb_gsl_with_nmatrix.h"
+#endif
+
 VALUE rb_gsl_vector_int_inner_product(int argc, VALUE *argv, VALUE obj);
 VALUE rb_gsl_vector_int_do_something(VALUE obj, void (*func)(gsl_vector_int*));
 

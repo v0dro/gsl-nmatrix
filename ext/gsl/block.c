@@ -23,6 +23,10 @@
 #include "include/rb_gsl_with_narray.h"
 #endif
 
+#ifdef HAVE_NMATRIX_H
+#include "include/rb_gsl_with_nmatrix.h"
+#endif
+
 #define BASE_DOUBLE
 #include "include/templates_on.h"
 #include "block_source.c"
