@@ -74,4 +74,15 @@ class MatrixTest < GSL::TestCase
     assert_equal z1, m[1, 0]
   end
 
+  def test_mul
+    { 1 => m0 = GSL::Matrix.ones(1), 2 => GSL::Matrix[[2]] }.each { |a, b|
+      [a, a.to_f].each { |c| assert_equal(b, m0 * c); assert_equal(b, c * m0) } }
+  
+    { 1 => m1 = GSL::Matrix::Int.ones(1), 2 => GSL::Matrix::Int[[2]] }.each { |a, b|
+      assert_equal(b, m1 * a); [a, a.to_f].each { |c| assert_equal(b, c * m1) } }
+  
+    assert_equal GSL::Matrix[[0.2]], m0 * 0.2
+    assert_equal GSL::Matrix[[0.2]], 0.2 * m0
+    assert_equal GSL::Matrix::Int[[0]], 0.2 * m1
+  end
 end

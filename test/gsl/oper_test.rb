@@ -19,7 +19,7 @@ class OperTest < GSL::TestCase
     mul_float = 0.2 * matrix
 
     assert_equal 2, mul_int[0, 0]
-    # assert_equal 0, mul_float[0, 0]
+    assert_equal 0, mul_float[0, 0]
   end
 
   def test_multiplication_matrix_complex
@@ -47,7 +47,7 @@ class OperTest < GSL::TestCase
     mul_float = 0.2 * vector
 
     assert_equal 2, mul_int[0]
-    # assert_equal 0, mul_float[0]
+    assert_equal 0, mul_float[0]
   end
 
   def test_multiplication_vector_complex
