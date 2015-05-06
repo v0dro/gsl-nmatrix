@@ -27,7 +27,10 @@
 #include <gsl/gsl_matrix.h>
 #include <gsl/gsl_permutation.h>
 #include <gsl/gsl_ieee_utils.h>
-#include "rb_gsl_with_narray.h"
+
+#ifdef HAVE_NMATRIX_H
+#include "rb_gsl_with_nmatrix.h"
+#endif
 
 EXTERN ID rb_gsl_id_beg, rb_gsl_id_end, rb_gsl_id_excl, rb_gsl_id_to_a;
 

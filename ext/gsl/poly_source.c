@@ -70,6 +70,11 @@ double gsl_poly_int_eval(const BASE c[], const int len, const double x)
 #ifdef HAVE_NARRAY_H
 #include "include/rb_gsl_with_narray.h"
 #endif
+
+#ifdef HAVE_NMATRIX_H
+#include "include/rb_gsl_with_nmatrix.h"
+#endif
+
 #ifdef GSL_1_11_LATER
 static VALUE rb_gsl_complex_poly_complex_eval(VALUE a, VALUE b);
 #endif

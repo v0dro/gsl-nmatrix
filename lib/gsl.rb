@@ -1,5 +1,5 @@
 begin
-  require 'narray'
+  require 'nmatrix'
 rescue LoadError
 end
 
