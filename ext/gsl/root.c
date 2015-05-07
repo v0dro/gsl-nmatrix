@@ -154,7 +154,7 @@ static VALUE rb_gsl_root_test_residual(VALUE obj, VALUE xl,VALUE eabs)
   return INT2FIX(gsl_root_test_residual(NUM2DBL(xl),  NUM2DBL(eabs)));
 }
 
-static VALUE rb_gsl_fsolver_solve(int argc, VALUE *argv, VALUE *obj)
+static VALUE rb_gsl_fsolver_solve(int argc, VALUE *argv, VALUE obj)
 {
   gsl_root_fsolver *s = NULL;
   gsl_function *F = NULL;
