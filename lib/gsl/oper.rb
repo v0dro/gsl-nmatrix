@@ -13,8 +13,6 @@ module GSL::Oper
                GSL::Matrix::Int,     GSL::Vector::Int,
                GSL::Vector::Complex, GSL::Matrix::Complex,
                *GSL.have_tensor? ? [GSL::Tensor, GSL::Tensor::Int] : []
-            require 'pry'
-            # binding.pry
             other.scale(self)
           else
             _gsl_oper_original_mul(other)

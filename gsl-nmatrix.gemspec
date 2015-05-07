@@ -4,7 +4,7 @@
 
 Gem::Specification.new do |s|
   s.name = "gsl-nmatrix"
-  s.version = "1.16.0.4"
+  s.version = "1.17"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.require_paths = ["lib"]
@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
   s.homepage = "http://github.com/v0dro/gsl-nmatrix"
   s.licenses = ["GPL-2.0"]
   s.rdoc_options = ["--title", "Ruby/GSL (v1.16.0.4)", "--charset", "UTF-8", "--line-numbers", "--all", "--main", "index.rdoc", "--root", "rdoc"]
-  s.required_ruby_version = Gem::Requirement.new(">= 1.8.7")
+  s.required_ruby_version = Gem::Requirement.new(">= 1.9.3")
   s.requirements = ["GSL (http://www.gnu.org/software/gsl/)"]
   s.rubygems_version = "2.4.5"
   s.summary = "Ruby interface to the GNU Scientific Library (NMatrix fork)"
