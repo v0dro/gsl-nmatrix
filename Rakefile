@@ -7,11 +7,11 @@ begin
 
   Hen.lay! {{
     :gem => {
-      :name          => %q{rb-gsl},
+      :name          => %q{gsl-nmatrix},
       :version       => GSL::RB_GSL_VERSION,
       :summary       => %Q{Ruby interface to the GNU Scientific Library #{note}},
       :description   => %Q{Ruby/GSL is a Ruby interface to the GNU Scientific Library, for numerical computing with Ruby #{note}},
-      :authors       => ['Yoshiki Tsunesada', 'David MacMahon', 'Jens Wille'],
+      :authors       => ['Yoshiki Tsunesada', 'David MacMahon', 'Jens Wille', 'Sameer Deshmukh'],
       :email         => %q{jens.wille@gmail.com},
       :license       => %q{GPL-2.0},
       :homepage      => :blackwinter,

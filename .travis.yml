@@ -20,7 +20,6 @@ script:
 
 install:
   - gem install nuggets power_assert
-  - gem install --prerelease --development rb-gsl
 
 before_install:
   - sudo apt-get update -qq
