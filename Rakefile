@@ -15,14 +15,14 @@ begin
       :email         => %q{jens.wille@gmail.com},
       :license       => %q{GPL-2.0},
       :homepage      => :blackwinter,
-      :dependencies  => [['narray', '>= 0.5.9']],
+      :dependencies  => [['nmatrix', '>= 0.1.0']],
       :requirements  => ['GSL (http://www.gnu.org/software/gsl/)'],
 
       :extra_files => FileList['examples/**/*', 'rdoc/*'].to_a,
 
       :extension => { :cross_compile => false },
 
-      :required_ruby_version => '>= 1.8.7'
+      :required_ruby_version => '>= 1.9.3'
     },
     :rdoc => {
       :title      => 'Ruby/GSL{version: (v%s)}',
