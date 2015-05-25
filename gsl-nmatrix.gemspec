@@ -28,20 +28,17 @@ Gem::Specification.new do |s|
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
       s.add_runtime_dependency(%q<nmatrix>, [">= 0.1.0"])
-      s.add_development_dependency(%q<hen>, [">= 0.8.1", "~> 0.8"])
       s.add_development_dependency(%q<rake>, [">= 0"])
       s.add_development_dependency(%q<rake-compiler>, [">= 0"])
       s.add_development_dependency(%q<test-unit>, [">= 0"])
     else
       s.add_dependency(%q<nmatrix>, [">= 0.1.0"])
-      s.add_dependency(%q<hen>, [">= 0.8.1", "~> 0.8"])
       s.add_dependency(%q<rake>, [">= 0"])
       s.add_dependency(%q<rake-compiler>, [">= 0"])
       s.add_dependency(%q<test-unit>, [">= 0"])
     end
   else
     s.add_dependency(%q<nmatrix>, [">= 0.1.0"])
-    s.add_dependency(%q<hen>, [">= 0.8.1", "~> 0.8"])
     s.add_dependency(%q<rake>, [">= 0"])
     s.add_dependency(%q<rake-compiler>, [">= 0"])
     s.add_dependency(%q<test-unit>, [">= 0"])

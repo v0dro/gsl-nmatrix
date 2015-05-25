@@ -1,4 +1,5 @@
-require 'test_helper'
+# require 'test_helper'
+require File.expand_path(%q{../test_helper}, __FILE__)
 
 class GSLTest < GSL::TestCase
 

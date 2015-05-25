@@ -1,6 +1,9 @@
 language:
   ruby
 
+env:
+  - CPLUS_INCLUDE_PATH=/usr/include/atlas C_INCLUDE_PATH=/usr/include/atlas
+
 rvm:
   - '1.9'
   - '2.0'
@@ -15,12 +18,13 @@ matrix:
   fast_finish:
     true
 
-script:
-  rake test
+script: "bundle exec rake compile && bundle exec rake test"
 
 install:
-  - gem install nuggets power_assert
+  - gem install bundler nuggets power_assert
+  - bundle install
 
 before_install:
   - sudo apt-get update -qq
   - sudo apt-get install -y libgsl0-dev
+  - sudo apt-get install -qq libatlas-base-dev
