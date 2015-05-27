@@ -8,7 +8,11 @@ begin
   require "gsl/#{RUBY_VERSION[/\d+.\d+/]}/gsl_native"
 rescue LoadError => err
   raise if err.respond_to?(:path) && !err.path
-  require 'gsl_native'    
+  if File.exist?(File.expand_path(%q{../gsl/gsl_native.so}, __FILE__))
+    require 'gsl/gsl_native.so'
+  else
+    require 'gsl_native'
+  end
 end
 
 require 'gsl/version'
